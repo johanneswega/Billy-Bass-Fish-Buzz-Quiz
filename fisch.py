@@ -1,10 +1,6 @@
 from TTS.api import TTS
 import sounddevice as sd
-import sounddevice as sd
 import soundfile as sf
-import serial
-import time
-import sounddevice as sd
 import serial
 import time
 import numpy as np
