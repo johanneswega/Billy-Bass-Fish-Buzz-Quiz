@@ -51,6 +51,9 @@ class Fisch():
 
     # method to speak a piece of text
     def speak(self, file, move=True, moveback=True):
+        # Stop any previous audio playback
+        sd.stop()
+        
         # Load audio
         data, samplerate = sf.read(file)
         # determine threshold for opening mouth
@@ -69,7 +72,7 @@ class Fisch():
                 self.send_command("CLOSE MOUTH")
             time.sleep(0.05)  # matches step duration
 
-        sd.wait()
+        sd.stop()
         self.send_command("CLOSE MOUTH")
         if moveback==True:
             self.send_command("MOVE BACK")

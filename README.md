@@ -50,7 +50,7 @@ This is currently configured for **macOS**. If you are using another operating s
 
 The Arduino code can be found in the `Arduino Code` folder if you want to see how the motor commands are received and handled.
 
-The main game interface is implemented in `GUI.py`. This contains the actual quiz game logic and graphical interface. See the sections below for more information about setting up and running a game.
+The main game interface is implemented in `FischQuiz.py`. This contains the actual quiz game logic and graphical interface. See the sections below for more information about setting up and running a game.
 
 ## Hardware
 
@@ -85,3 +85,5 @@ First fill in all the questions of the game in questions.json, the format is som
 Note that the answer is 0 here since the first answer is the correct one. Sometimes the fish needs some time to start up.
 
 Next, run the compile_questions.py which will generate audio files for each of your questions e.g. audio/q1/A.wav etc.
+
+Note there is currently some bug with the fisch if you use its bluetooth speaker. Therefore on your laptop make sure it is not connected to the LQSC_BT speaker on the fisch, just turn off bluetooth altogether. 

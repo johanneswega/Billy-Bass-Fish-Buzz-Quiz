@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>D.png</file>
+    <file>q.png</file>
+    <file>C.png</file>
+    <file>B.png</file>
+    <file>A.png</file>
+  </qresource>
+</RCC>
