@@ -1,0 +1,14 @@
+[
+  {
+    "category": "Geography",
+    "question": "Which of these «seas» is actually a sea?",
+    "options": ["The Dead Sea", "The Caspean Sea", "The Black Sea", "The Aral Sea"],
+    "answer": 2
+  },
+  {
+    "category": "Philosophy",
+    "question": "Who wrote the book: «Thus Spoke Zarathustra», published in 1883. ",
+    "options": ["Voltaire", "Nietzsche", "Schopenhauer", "Sartre"],
+    "answer": 1
+  }
+]
