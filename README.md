@@ -70,20 +70,67 @@ In the tutorial, he modifies the Billy Bass to add internal speakers and a Bluet
 
 For the basic functionality of this project, you essentially only need the **H-bridge motor driver** to control the Billy Bass's mouth and body motors.
 
-## Setting up a Game 
+## Setting Up a Game
 
-First fill in all the questions of the game in questions.json, the format is something like: 
+The easiest way to set up a new game is to clone the repository and create a separate copy for your quiz:
 
+```bash
+git clone https://github.com/johanneswega/Billy-Bass-Fish-Buzz-Quiz.git
+mv Billy-Bass-Fish-Buzz-Quiz New_Quiz
+cd New_Quiz
+rm -rf .git
+```
+
+This gives you a standalone copy of the project, including the basic audio files used for announcing the rules and other game instructions.
+
+### 1. Add Your Questions
+
+Fill in `questions.json` with the questions for your quiz. For a standard party, I normally use 30 questions.
+
+Each question should follow this format:
+
+```json
 [
   {
     "category": "Halloween",
-    "question": "In which country is «Užgavėnės» celebrated, a Halloween-like tradition where people dress up as Jews and go door-to-door asking for money?",
+    "question": "In which country is Užgavėnės celebrated, a Halloween-like tradition where people dress up and go door-to-door asking for money?",
     "options": ["Lithuania", "Poland", "Romania", "Belarus"],
     "answer": 0
-  }, ...]
+  }
+]
+```
 
-Note that the answer is 0 here since the first answer is the correct one. Sometimes the fish needs some time to start up.
+Each question contains the following fields:
 
-Next, run the compile_questions.py which will generate audio files for each of your questions e.g. audio/q1/A.wav etc.
+* `category`: The category of the question.
+* `question`: The question text.
+* `options`: A list of four possible answers.
+* `answer`: The index of the correct answer, starting at `0` for the first option, `1` for the second, and so on.
 
-Note there is currently some bug with the fisch if you use its bluetooth speaker. Therefore on your laptop make sure it is not connected to the LQSC_BT speaker on the fisch, just turn off bluetooth altogether. 
+### 2. Generate the Question Audio
+
+Once you have filled in `questions.json`, run the question compilation script:
+
+```bash
+python compile_questions.py
+```
+
+This generates audio files for each question and its answer options. For example, you should find files such as `audio/q1/A.wav` in the generated audio directories.
+
+### 3. Check the Bluetooth Connection
+
+There is currently a known issue when using the Billy Bass's built-in Bluetooth speaker. Before starting the game, make sure your laptop is **not connected to the `LQSC_BT` Bluetooth speaker** on the fish. The easiest workaround is to turn off Bluetooth on your laptop altogether.
+
+### 4. Customize the Additional Audio (Optional)
+
+If you want to change the greetings, rules, or other phrases spoken by Billy Bass, have a look at `gen_audio.py` and follow the instructions in that file. This step is optional. For a basic quiz game, the existing audio files are sufficient.
+
+### 5. Start the Game
+
+After generating all the question audio files, start the game with:
+
+```bash
+python FischQuiz.py
+```
+
+The game should now launch, and you're ready to play!

@@ -110,7 +110,7 @@ class MyWindow(QtWidgets.QMainWindow):
                 
     def get_ready(self, i):
         rules_text = ["Great, everyone's here! Before we begin, let me quickly explain the rules of the game. Listen carefully — I'll only go over them once.",
-                      "There will be thirty questions in total, covering a variety of categories. Every fifth question will match the theme of tonight's party — spooky Halloween!",
+                      "There will be thirty questions in total, covering a variety of categories.",
                       "Each correct answer earns you one point. I'll read each question aloud along with the four possible answers. When I'm done, your controllers will light up, meaning it's time to answer. You'll have fifteen seconds to respond, and only your first answer counts, so make sure to hit the right color on your buzzer.",
                       "Doesn't seem to difficult does it?"]
         if i<3:
