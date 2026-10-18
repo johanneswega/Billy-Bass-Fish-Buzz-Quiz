@@ -1,9 +1,9 @@
 [
   {
-    "category": "Geography",
-    "question": "Which of these «seas» is actually a sea?",
-    "options": ["The Dead Sea", "The Caspean Sea", "The Black Sea", "The Aral Sea"],
-    "answer": 2
+    "category": "Astronomy",
+    "question": "Which planet in our solar system is the hottest, even though it is not the closest to the Sun?",
+    "options": ["Mercury", "Venus", "Earth", "Saturn"],
+    "answer": 1
   },
   {
     "category": "Philosophy",

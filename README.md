@@ -2,6 +2,8 @@
 
 A four-player quiz game hosted by a singing **Big Mouth Billy Bass** fish, with **PlayStation 2 Buzz! controllers** used as the player input devices.
 
+![Basic Demo](https://youtu.be/9lwKqI7PBsQ)
+
 The project combines hardware and software to create a quirky, interactive game-show experience:
 
 * 🐟 **Arduino** controls the Billy Bass fish and brings the game host to life.
